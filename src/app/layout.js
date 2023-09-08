@@ -10,8 +10,33 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+  	<html lang="en">
+      <body className={inter.className}>
+				<header>
+					<p>Travel Partner</p>
+					<img src="" alt="" />
+				</header>
+				{children}
+				<footer>
+				<div>
+				<ul>
+					<li>
+						<a href="">О нас</a>
+					</li>
+					<li>
+						<a href="">О сервисе</a>
+					</li>
+					<li>
+						<a href="">Политика конфиденциальности</a>
+					</li>
+					<li>
+						<a href="">Поддержка</a>
+					</li>
+				</ul>
+				<p>© 2023, Travel Partner — ваш помощник в путешествии</p>
+				</div>
+			</footer>
+			</body>
     </html>
   )
 }

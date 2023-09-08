@@ -1,5 +1,12 @@
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+html{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  margin: 0px;
+  padding: 0px;
+  background-color: #DBCB40;
+}
+footer,header{
+  background-color: #B6A801;
 }
