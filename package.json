@@ -1,5 +1,5 @@
 {
-  "name": "travel-partner",
+  "name": "nextj",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "antd": "^5.9.0"
+    "antd": "^5.9.0",
+    "cors": "^2.8.5",
+    "eslint": "8.49.0",
+    "eslint-config-next": "13.5.2",
+    "express": "4.18.2",
+    "next": "13.5.2",
+    "node-fetch": "3.3.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   }
 }
