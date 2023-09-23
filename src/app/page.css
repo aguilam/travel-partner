@@ -76,3 +76,19 @@
 .Cities_button{
 
 }
+.Feature__containers{
+  width: 65%;
+  background-color: #DDDE5E;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 auto;
+  border-radius: 30px;
+}
+.Feature__info_containers{
+  background-color: #D8D939;
+  display: flex;
+  flex-direction: row;
+  margin: 15px 15px 15px 15px;
+  justify-content: space-around;
+  border-radius: 30px;
+}

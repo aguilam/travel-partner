@@ -1,7 +1,6 @@
 'use client'
 import './page.css'
 import { Button,Form, Input, DatePicker } from 'antd';
-import { useEffect } from 'react';
 const { RangePicker } = DatePicker;
 export default function Home() {
   let api_key = "298fc3c7d1bfb15bbf5ca1b45c6e8395";
@@ -16,24 +15,6 @@ export default function Home() {
       console.log(data);
   }
 	WeatherSearch()  
-  useEffect(() => {
-    // Выполняем GET-запрос к вашему серверу при загрузке страницы
-    fetch('http://localhost:3001') // Укажите правильный URL вашего сервера
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json(); // Парсим ответ в JSON
-      })
-      .then(data => {
-        // Обрабатываем полученные данные
-        console.log('Полученные данные1:', data);
-        // Дальнейшая обработка данных
-      })
-      .catch(error => {
-        console.error(error);
-      });
-  }, []); // Пустой массив зависимостей означает, что эффект будет выполнен только один раз при монтировании компонента
   return (
     <main>
       <Form
