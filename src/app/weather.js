@@ -34,10 +34,10 @@ export default function Weather() {
     };
     fetchCity();
   }, []);
-  const airportCode = 'SVO';
+  const airportCode = 'VKO';
   var cityCode = ''
   var cityName = ''
-
+//http://openweathermap.org/img/w/10d.png
   Airports.map(airport => {
     if (airport.code === airportCode){
       console.log('Информация об аэропорте:', airport);
