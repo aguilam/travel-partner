@@ -25,6 +25,7 @@
 .Feature__info_container{
   background-color: #D8D939;
   height: 25%;
+  width: 100px;
   display: flex;
   flex-direction: row;
   margin-bottom: 30px;
