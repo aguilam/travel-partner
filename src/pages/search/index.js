@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../../app/page.css'
+import  Weather  from '../../app/weather.js';
 import { Button, Modal } from 'antd';
 export async function getServerSideProps() {
   const response = await fetch('http://localhost:3001');
@@ -12,16 +13,14 @@ export async function getServerSideProps() {
   };
 }
 
-export default function Page({ tickets }) {
+export default function Pages({ tickets }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [ModalInfo, setModalInfo] = useState([]);
 
 const showModal = (ticket) => {
   setIsModalOpen(true);
   setModalInfo(ticket)
-  console.log('nhhu',ModalInfo)
 };
-
 const handleOk = () => {
   setIsModalOpen(false);
 };
@@ -57,15 +56,16 @@ const handleCancel = () => {
           onOk={handleOk}
           onCancel={handleCancel}
           >
-          <p>{ModalInfo.origin}</p>
-          <p>{ModalInfo.destination}</p>
-          <p>{ModalInfo.airline}</p>
-          <p>{ModalInfo.departure_at}</p>
-          <p>{ModalInfo.return_at}</p>
-          <p>{ModalInfo.expires_at}</p>
-          <p>{ModalInfo.price}</p>
-          <p>{ModalInfo.flight_number}</p>
-          <p>{ModalInfo.transfers}</p>
+            <p>{ModalInfo.origin}</p>
+            <p>{ModalInfo.destination}</p>
+            <p>{ModalInfo.airline}</p>
+            <p>{ModalInfo.departure_at}</p>
+            <p>{ModalInfo.return_at}</p>
+            <p>{ModalInfo.expires_at}</p>
+            <p>{ModalInfo.price}</p>
+            <p>{ModalInfo.flight_number}</p>
+            <p>{ModalInfo.transfers}</p>
+            <Weather returnDate={ticket.return_at}></Weather>
           </Modal>
         </>
         );
